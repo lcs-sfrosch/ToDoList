@@ -23,10 +23,10 @@ struct ListView: View {
                         
                         let newId = lastId + 1
                         
-                        let newTodoItem + TodoItem(id: newId,
+                        let newTodoItem = TodoItem(id: newId,
                                                    description:newItemDescription, completed: false)
-                        TodoItem.append(newTodoItem)
-                        newItemDescription
+                        todoItems.append(newTodoItem)
+                        newItemDescription = ""
                         
                     }, label: {
                         Text ("ADD")
@@ -34,8 +34,21 @@ struct ListView: View {
                     })
                     
                     
+                    
                 }
-                List {
+                .padding(20)
+                
+                List(existingTodoItems) { currentItem in
+                    Label(title: {
+                        Text(currentItem.description)
+                    }, icon: {
+                        if currentItem.completed == true {
+                            Image(systemName: "checkmark.circle")
+                        } else {
+                            Image(systemName: "circle")
+                        }
+                    })
+                
                     
                     
                 }
