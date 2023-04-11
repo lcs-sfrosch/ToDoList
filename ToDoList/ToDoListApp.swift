@@ -12,6 +12,7 @@ struct ToDoListApp: App {
     var body: some Scene {
         WindowGroup {
             ListView()
+                .environment(\.blackbirdDatabase, AppDatabase.instance)
             
         }
     }

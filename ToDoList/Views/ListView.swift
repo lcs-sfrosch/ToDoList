@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct ListView: View {
+    @Environment(\.blackbirdDatabase) var db:
+    Blackbird.Database?
     
+    @BlackbirdLiveModels({ db in
+        try await TodoItem.read(from: db)
+    }) var todoItems
     @State var todoItems: [TodoItem] = existingTodoItems
     @State var newItemDescription: String = ""
     

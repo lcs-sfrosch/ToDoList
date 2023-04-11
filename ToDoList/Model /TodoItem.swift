@@ -18,7 +18,7 @@ var existingTodoItems = [
     ,
     TodoItem(id: 2, description: "hangout with sebby", completed: false)
     ,
-    TodoItem(id: 3, description: "yoooo now way fham ", completed: false)
+    TodoItem(id: 3, description: "yoooo now way fham ", completed: true)
     ,
     
 
