@@ -11,6 +11,8 @@
 		9864B8AA29DB97CF002BEB86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9864B8A929DB97CF002BEB86 /* Assets.xcassets */; };
 		9864B8AD29DB97CF002BEB86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9864B8AC29DB97CF002BEB86 /* Preview Assets.xcassets */; };
 		9864B8B529DB9882002BEB86 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9864B8B429DB9882002BEB86 /* ListView.swift */; };
+		98C546C429E707EC0051848D /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 98C546C329E707EC0051848D /* db.sqlite */; };
+		98C546C729E708830051848D /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = 98C546C629E708830051848D /* Blackbird */; };
 		98D39A5929DDB01D00B389A3 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D39A5829DDB01D00B389A3 /* TodoItem.swift */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +22,7 @@
 		9864B8A929DB97CF002BEB86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9864B8AC29DB97CF002BEB86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9864B8B429DB9882002BEB86 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		98C546C329E707EC0051848D /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
 		98D39A5829DDB01D00B389A3 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -28,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98C546C729E708830051848D /* Blackbird in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +85,7 @@
 		98D39A5729DDAFF600B389A3 /* Model  */ = {
 			isa = PBXGroup;
 			children = (
+				98C546C329E707EC0051848D /* db.sqlite */,
 				98D39A5829DDB01D00B389A3 /* TodoItem.swift */,
 			);
 			path = "Model ";
@@ -102,6 +107,9 @@
 			dependencies = (
 			);
 			name = ToDoList;
+			packageProductDependencies = (
+				98C546C629E708830051848D /* Blackbird */,
+			);
 			productName = ToDoList;
 			productReference = 9864B8A229DB97CC002BEB86 /* ToDoList.app */;
 			productType = "com.apple.product-type.application";
@@ -130,6 +138,9 @@
 				Base,
 			);
 			mainGroup = 9864B89929DB97CB002BEB86;
+			packageReferences = (
+				98C546C529E708830051848D /* XCRemoteSwiftPackageReference "Blackbird" */,
+			);
 			productRefGroup = 9864B8A329DB97CC002BEB86 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9864B8AD29DB97CF002BEB86 /* Preview Assets.xcassets in Resources */,
+				98C546C429E707EC0051848D /* db.sqlite in Resources */,
 				9864B8AA29DB97CF002BEB86 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +373,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		98C546C529E708830051848D /* XCRemoteSwiftPackageReference "Blackbird" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marcoarment/Blackbird";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		98C546C629E708830051848D /* Blackbird */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 98C546C529E708830051848D /* XCRemoteSwiftPackageReference "Blackbird" */;
+			productName = Blackbird;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9864B89A29DB97CB002BEB86 /* Project object */;
 }
